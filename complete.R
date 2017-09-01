@@ -4,8 +4,8 @@ complete <- function(directory, id = 1:332) {
         df <- data.frame()
         for (i in id) {
             raw_df <- read.csv(x[i])
-            cp <- sum(complete.cases(raw_df))
-            df <- rbind(df, data.frame(id = i, nobs = cp))
+            comp <- sum(complete.cases(raw_df))
+            df <- rbind(df, data.frame(id = i, nobs = comp))
         }
         df
     }
